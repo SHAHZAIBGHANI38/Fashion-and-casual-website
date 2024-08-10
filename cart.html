@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Fashion and Casual</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Add your existing styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fce4ec; /* Light pink background */
+        }
+        .navbar {
+            background-color: #fff; /* White background */
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo img {
+            width: 125px;
+        }
+        .navbar nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+        .navbar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar nav ul li {
+            margin: 0 15px;
+        }
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: #333; /* Dark grey text */
+            font-weight: 600;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .icons i {
+            font-size: 30px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: #007bff; /* Primary blue color */
+        }
+        .navbar .icons img {
+            width: 30px;
+            cursor: pointer;
+        }
+        .cart-page {
+            padding: 40px 0;
+            background-color: #fce4ec; /* Light pink background */
+        }
+        .cart-page .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .cart-page h1 {
+            color: #333; /* Dark grey text */
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .cart-table th, .cart-table td {
+            padding: 15px;
+            border: 1px solid #ddd; /* Light grey border */
+            text-align: center;
+        }
+        .cart-table th {
+            background-color: #f9f9f9; /* Very light grey */
+        }
+        .cart-table img {
+            width: 100px;
+            height: auto;
+        }
+        .cart-table input {
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #007bff; /* Primary blue color */
+            border-radius: 4px;
+        }
+        .cart-summary {
+            margin-top: 20px;
+            border-top: 2px solid #ddd; /* Light grey border */
+            padding-top: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cart-summary .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd; /* Light grey border */
+        }
+        .cart-summary .summary-item:last-child {
+            border-bottom: none;
+        }
+        .cart-summary .summary-item span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333; /* Dark grey text */
+        }
+        .checkout-button {
+            display: block;
+            background-color: #007bff; /* Primary blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: auto;
+        }
+        .checkout-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .checkout-button:active {
+            transform: scale(0.98);
+        }
+        .footer {
+            background-color: #fff; /* White background */
+            padding: 20px 0;
+            color: #333; /* Dark grey text */
+            text-align: center;
+            border-top: 1px solid #ddd; /* Light grey border */
+        }
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+            flex: 1;
+            margin: 10px;
+        }
+        .footer-col-2 img {
+            width: 125px;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+        .footer ul li a {
+            text-decoration: none;
+            color: #333; /* Dark grey text */
+        }
+        .copyright {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="f&C.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i>
+            <img src="images/menu.png" class="menu-icon" onclick="menuToggle()" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div class="cart-page">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    <tr>
+                        <td><img src="15a.jpg" alt="Product Image"></td>
+                        <td>Men's POLO T-SHIRT</td>
+                        <td><input type="number" value="1" min="1" class="quantity" data-price="99.99"></td>
+                        <td>$99.99</td>
+                        <td class="item-total">$99.99</td>
+                        <td><button class="remove-item">Remove</button></td>
+                    </tr>
+               <tr>
+                        <td><img src="product8.jpg" alt="Product Image"></td>
+                        <td>Men's POLO T-SHIRT</td>
+                        <td><input type="number" value="1" min="1" class="quantity" data-price="99.99"></td>
+                        <td>45.00</td>
+                        <td class="item-total">45.00</td>
+                        <td><button class="remove-item">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="product14a.jpg" alt="Product Image"></td>
+                        <td>Men's POLO T-SHIRT</td>
+                        <td><input type="number" value="1" min="1" class="quantity" data-price="99.99"></td>
+                        <td>65</td>
+                        <td class="item-total">$65.00</td>
+                        <td><button class="remove-item">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$99.99</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax (10%):</span>
+                    <span id="tax">$2.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping:</span>
+                    <span>$5.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Total:</span>
+                    <span id="total">$114.99</span>
+                </div>
+            </div>
+
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="phone no">+92 3353838739</a></li>
+                        <li><a href="#">itxzaibiikhan@gmail.com</a></li>
+                        <li><a href="#">123 Street, City, Country</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <img src="f&C.jpg" alt="Logo">
+                    <p>Subscribe to our newsletter for latest updates and offers.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Fashion and Casual. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function menuToggle() {
+            const menuItems = document.getElementById('MenuItems');
+            menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function updateCart() {
+            const quantities = document.querySelectorAll('.quantity');
+            let subtotal = 0;
+
+            quantities.forEach(input => {
+                const quantity = parseInt(input.value);
+                const price = parseFloat(input.dataset.price);
+                const total = quantity * price;
+                subtotal += total;
+
+                input.closest('tr').querySelector('.item-total').textContent = `$${total.toFixed(2)}`;
+            });
+
+            const tax = subtotal * 0.10;
+            const shipping = 5.00; // Fixed shipping fee
+            const total = subtotal + tax + shipping;
+
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        document.querySelectorAll('.quantity').forEach(input => {
+            input.addEventListener('change', updateCart);
+        });
+
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', () => {
+                button.closest('tr').remove();
+                updateCart(); // Update cart totals after removing an item
+            });
+        });
+
+        // Initial cart update
+        updateCart();
+    </script>
+</body>
+</html>

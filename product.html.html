@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Fashion and Casual</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .cart-icon {
+            font-size: 30px; /* Adjust size as needed */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation and Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec;
+            color: #4a2c2a;
+        }
+
+        /* Container for navigation and icons */
+        .header {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        /* Navigation styling */
+        nav {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Space between nav items and icons */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Icon styling */
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between icons */
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .cart-icon:hover {
+            color: #007bff;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Icons -->
+        <div class="icons">
+            <!-- Cart Icon -->
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <!-- Menu Icon -->
+            <img src="images/menu.png" class="menu-icon" onclick="menuToggle()" alt="Menu Icon" width="30px" height="30px">
+        </div>
+    </div>
+
+    <!-- Sample JavaScript for menu toggle -->
+    <script>
+        function menuToggle() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+    <!-- Products Section -->
+    <div class="products">
+        <div class="small container">
+          <div class="row row-2">
+            <h2 class="title">ALL Products</h2>
+            <select>
+                <option> Default Shorting</option> 
+                  <option> Short by pric</option> 
+                  <option>Short by popularity</option> 
+                  <option> Short by rating</option> 
+                  <option> Short by sale </option> 
+            </select>
+            </div>
+        
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-4">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h4>Product Name 1</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>$30.00</p>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-4">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h4>Product Name 2</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$45.00</p>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-4">
+                    <img src="product3.jpg" alt="Product 3">
+                    <h4>Product Name 3</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>$25.00</p>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-4">
+                    <img src="product4.jpg" alt="Product 4">
+                    <h4>Product Name 4</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                 <div class="row">
+      <div class="col-4">
+          <img src="product9.jpg">
+          <h4> NEW MEN'S SNIKKERS </h4>
+          <div class="rating">
+             <i class="fa fa-star" ></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$40.00</p>
+          
+          </div>
+           <div class="col-4">
+          <img src="product10.jpg">
+          <h4> NEW MEN'S MATCHABLE DRESS SENSE PARTY WEAR AND CASUAL </h4>
+          <div class="rating">
+             <i class="fa fa-star" ></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$40.00</p>
+          
+          </div> <div class="col-4">
+          <img src="product4.jpg">
+          <h4> WOMEN CASUAL DESCENT DRESS </h4>
+          <div class="rating">
+             <i class="fa fa-star" ></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>  
+          </div>
+          <p>$80.00</p>
+          
+          </div> <div class="col-4">
+          <img src="product8.jpg">
+          <h4> NEW MEN'S POLO SHIRT </h4>
+          <div class="rating">
+             <i class="fa fa-star" ></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$20.00</p>
+          
+          </div>
+          
+          
+      </div>
+        
+                  <div class="row">
+      <div class="col-4">
+          <img src="latest%20product%202.jpg">
+          <h4> Luxurious Pant Coat Design Wedding Suit for Men  </h4>
+           <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$40.00</p>
+          
+          </div>
+           <div class="col-4">
+          <img src="lp3.jpg">
+          <h4> Sleeves Casual Wear Ladies Coat Pant Set</h4>
+            <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$40.00</p>
+          
+          </div> <div class="col-4">
+          <img src="lp4.jpg">
+          <h4> Men Sneaker Spring Summer 202 </h4>
+            <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$80.00</p>
+          
+          </div> <div class="col-4">
+          <img src="lp5.jpg">
+          <h4> Women's blue leather heels, Shoe Handbag Shahr-e Jadid-e Majlesi </h4>
+           <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$20.00</p>
+          
+          </div>
+          
+          
+      </div>
+                        <div class="row">
+      <div class="col-4">
+          <img src="product10.jpg">
+          <h4> LADIES OUTFIT 2-piece
+          </h4>
+             <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$40.00</p>
+          
+          </div>
+           <div class="col-4">
+          <img src="lp8.jpg">
+          <h4> NEW LOOK BTS SHIRT AND PAINT </h4>
+             <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$40.00</p>
+          
+          </div> <div class="col-4">
+          <img src="lp7.jpg">
+          <h4> Men's Suit Vest with Herringbone </h4>
+             <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$80.00</p>
+          
+          </div> <div class="col-4">
+          <img src="lp6.jpg">
+          <h4> Men's European Fashion: A style Guide For Gentlemen 2024 </h4>
+             <div class="rating">
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        <span class="star">&#9734;</span>
+    </div>
+
+          <p>$20.00</p>
+          
+                            </div>
+          
+      </div>
+            </div>
+        </div>
+            </div>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8bbd0;
+            color: #4a2c2a;
+            text-align: center;
+        }
+
+        .pagination {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            color: #555;
+            float: left;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+            font-size: 18px;
+            font-weight: bold; /* Make numbers bold */
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pagination a.active {
+            background-color: #007bff;
+            color: white;
+            border: 1px solid #007bff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #e0f7fa;
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .pagination a:first-child,
+        .pagination a:last-child {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pagination Component -->
+    <div class="pagination">
+        <a href="page1.html">&laquo;</a> <!-- Link to the previous page -->
+        <a href="page1.html">1</a>
+        <a href="page2.html" class="active">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">&raquo;</a> <!-- Link to the next page -->
+    </div>
+
+</body>
+</html>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>DOWNLOAD OUR APP</h3>
+                    <p>Download the app for Android and iOS mobile phones</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="f&C.jpg" alt="Logo">
+                    <p>Download the app for Android and iOS mobile phones</p>
+                    <div class="app-logo">
+                        <img src="play-store-logo.png" alt="Play Store">
+                        <img src="appstore-logo.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Fashion and Casual</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+        function menuToggle() {
+            var menuItems = document.getElementById("MenuItems");
+            menuItems.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
